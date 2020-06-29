@@ -21,6 +21,17 @@ Generate a project with prometheus support
 ```mn create-app micro-prometheus --features micrometer-prometheus --lang groovy```
 
 
+### Helm
+```curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+chmod +x get_helm.sh 
+./get_helm.sh
+helm repo add stable https://kubernetes-charts.storage.googleapis.com
+helm repo update 
+helm install stable/prometheus-operator --generate-name 
+```
+
+
+
 ### Helm Chart
 https://hub.helm.sh/charts/stable/prometheus-operator
 
