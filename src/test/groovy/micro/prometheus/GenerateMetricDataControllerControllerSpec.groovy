@@ -23,7 +23,7 @@ class GenerateMetricDataControllerControllerSpec extends Specification {
 
     void "test index"() {
         given:
-        HttpResponse response = client.toBlocking().exchange("/generateMetricDataController")
+        HttpResponse response = client.toBlocking().exchange("/generateMetricData")
 
         expect:
         response.status == HttpStatus.OK
